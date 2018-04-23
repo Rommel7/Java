@@ -1,7 +1,7 @@
 //Exercise 1 – Working with integers
 
 public class Exercise1 {
-
+	
 	// 1. Write a method int add(int a, int b) that returns the sum of a and b;
 	public static int Add(int a, int b) {
 		return a + b;
@@ -49,7 +49,8 @@ public class Exercise1 {
 		//4
 		System.out.println("4. Min metod: " + Min(100, 20, 500));
 		//5
-		System.out.println("5. Gcd metod: " + Gcd(50, 200));
+		System.out.println("5. Gcd metod: " + Gcd(10, 4));
+		
+		System.out.println(Add(500,1500));
 	}
-
 }

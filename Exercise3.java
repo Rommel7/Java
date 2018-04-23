@@ -25,6 +25,7 @@ public class Exercise3 {
 		// Calculation metodunu burda çağırırıq və userin daxil etdiyi 2 integeri (a və b-ni) Calculation metoduna ötürürük, ardını o metod hesablayıb qaytaracaq.
 		Calculation(a, b);
 	}
+	
 
 	// Bütün yoxlamaları bu Calculation metodu aparır.
 	public static void Calculation(int a, int b) {

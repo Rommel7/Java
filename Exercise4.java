@@ -62,9 +62,11 @@ public class Exercise4 {
 			if (b != 0) {
 				int div = a / b;
 				System.out.println("Output: " + div);
+				break;
 			}
 			System.out.println("Can't divide by zero! :P");
 			break;
+		//Default case-lərdən olan cavab daxil etməyəndə işə düşür.
 		default:
 			System.out.println("\nPlease choose the valid operation and try again!\n");
 			ReadLine();

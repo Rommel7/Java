@@ -11,11 +11,11 @@ public class Exercise2 {
 
 	// 1. Write a method int min(int[] array) that returns the smallest value stored in the array
 
-	public static int Min(int[] inputArray) {
-		int minValue = inputArray[0];
-		for (int i = 1; i < inputArray.length; i++) {
-			if (inputArray[i] < minValue) {
-				minValue = inputArray[i];
+	public static int Min(int[] array) {
+		int minValue = array[0];
+		for (int i = 1; i < array.length; i++) {
+			if (array[i] < minValue) {
+				minValue = array[i];
 			}
 		}
 		return minValue;
@@ -27,7 +27,6 @@ public class Exercise2 {
 	public static int Find(int[] array, int value) {
 		int j = -1;
 		for (int i = 0; i < array.length; i++) {
-
 			if (array[i] == value) {
 				j = i;
 				break;
@@ -39,9 +38,11 @@ public class Exercise2 {
 	// 3. Write a method int sumArray(int[] array) that returns the sum of all the elements in the array.
 	public static int sumArray(int[] array) {
 		int total = 0;
+
 		for (int i = 0; i < myList.length; i++) {
 			total += myList[i];
 		}
+
 		return total;
 	}
 
@@ -49,22 +50,26 @@ public class Exercise2 {
 	public static void printArray(int[] array) {
 		System.out.print("4. All values stored in the array is: ");
 		for (int i = 0; i < myList.length; i++) {
-			System.out.print(myList[i] + ", ");
+			System.out.print(myList[i] + " ");
 		}
 	}
 
 	// 5. Write a method int[] reverseArray(int[] array) that returns a new array that stores the elements 
 	// of the array given as argument.
 
-	public static void reverse(int[] arrayOne) {
+	public static int[] reverseArray(int[] array) {
+
 		System.out.print("\n5. Reversed array: ");
-		for (int i = 0; i < arrayOne.length; i++) {
-			int temp = arrayOne[i];
-			arrayOne[i] = arrayOne[arrayOne.length - i - 1];
-			arrayOne[arrayOne.length - 1] = temp;
-			System.out.print(arrayOne[i] + ", ");
+		int[] newArray = new int[array.length];
+
+		for (int i = 0; i < array.length; i++) {
+			newArray[i] = array[array.length - 1 - i];
 		}
+
+		System.out.println(Arrays.toString(newArray));
+		return newArray;
 	}
+
 	// 6. Write a method main to test the above methods
 
 	public static void main(String[] args) {
@@ -73,16 +78,20 @@ public class Exercise2 {
 		//1 Array.sort();
 		Arrays.sort(myList);
 		System.out.println("1. Min-2 metod: " + myList[0]);
+
 		//2
 		System.out.println("2. Find metod: " + Find(myList, 22));
 		//2 Array.sort();
 		Arrays.sort(myList);
-		Arrays.binarySearch(myList, 2);
+		System.out.println("1. Find-2 metod: " + Arrays.binarySearch(myList, 22));
+
 		//3
 		System.out.println("3. Sum of all the elements in the array: " + sumArray(myList));
+
 		//4
 		printArray(myList);
+
 		//5
-		reverse(myList);
+		reverseArray(myList);
 	}
 }
